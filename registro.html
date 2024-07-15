@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        .dropdown-menu {
+            display: none;
+        }
+        .dropdown-menu.active {
+            display: block;
+        }
+        section {
+            padding: 60px 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center h-screen">
+    <!-- Header con Menú Desplegable -->
+    <header class="bg-gray-800 text-white w-full p-4 relative z-10">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <h2 class="text-xl font-bold">Plataforma de Eventos</h2>
+            <nav class="hidden md:block"> <!-- Oculta en dispositivos móviles -->
+                <ul class="flex space-x-4">
+                    <li><a href="index.html#inicio" class="hover:text-gray-400">Inicio</a></li>
+                    <li><a href="index.html#acerca" class="hover:text-gray-400">Acerca de</a></li>
+                    <li><a href="index.html#contacto" class="hover:text-gray-400">Contacto</a></li>
+                    <li class="relative dropdown">
+                        <a href="#" class="hover:text-gray-400">Opciones</a>
+                        <ul id="dropdown-menu" class="dropdown-menu hidden absolute right-0 mt-2 bg-white text-gray-800 rounded-lg shadow-lg z-20">
+                            <li><a href="registro.html" class="block px-4 py-2 hover:bg-gray-200">Registrarse</a></li>
+                            <li><a href="login.html" class="block px-4 py-2 hover:bg-gray-200">Iniciar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="md:hidden"> <!-- Visible solo en dispositivos móviles -->
+                <button id="mobile-menu-toggle" class="text-gray-400 hover:text-gray-300 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <ul id="mobile-menu" class="hidden md:flex md:flex-col md:space-y-2 bg-white text-gray-800 rounded-lg shadow-lg absolute right-0 mt-2 z-20">
+                    <li><a href="index.html#inicio" class="block px-4 py-2 hover:bg-gray-200">Inicio</a></li>
+                    <li><a href="index.html#acerca" class="block px-4 py-2 hover:bg-gray-200">Acerca de</a></li>
+                    <li><a href="index.html#contacto" class="block px-4 py-2 hover:bg-gray-200">Contacto</a></li>
+                    <li><a href="registro.html" class="block px-4 py-2 hover:bg-gray-200">Registrarse</a></li>
+                    <li><a href="login.html" class="block px-4 py-2 hover:bg-gray-200">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="flex items-center justify-center h-screen -mt-16">
+        <div class="max-w-md w-full p-6 bg-white rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-center mb-6">Registro de Usuario</h2>
+            <form action="#" method="POST" class="space-y-4">
+                <input type="email" name="email" placeholder="Correo electrónico" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                <input type="password" name="password" placeholder="Contraseña" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                <input type="password" name="confirm_password" placeholder="Confirmar Contraseña" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                <select name="role" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                    <option value="" disabled selected>Seleccione su rol</option>
+                    <option value="organizer">Organizador</option>
+                    <option value="attendee">Asistente</option>
+                </select>
+                <div class="flex justify-center">
+                    <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg">Registrarse</button>
+                </div>
+            </form>
+            <div class="text-center mt-4">
+                <button onclick="window.location.href='login.html'" class="text-sm text-blue-500 hover:text-blue-600 focus:outline-none">¿Ya tienes una cuenta? Inicia sesión</button>
+            </div>
+        </div>
+    </div>
+    <!-- Enlazar el archivo JavaScript -->
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
+
