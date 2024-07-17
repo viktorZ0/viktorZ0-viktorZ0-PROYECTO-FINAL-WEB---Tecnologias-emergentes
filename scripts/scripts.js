@@ -19,4 +19,36 @@ const mobileMenu = document.getElementById('mobile-menu');
 
 toggleButton.addEventListener('click', function() {
     mobileMenu.classList.toggle('hidden');
+//fin..............................
+
+    
 });
+ //eventos de los botones "asistir en el index.html"
+    // Obtén el botón por su ID
+    const btnAsistir1 = document.getElementById('btnAsistir1');
+
+    // Agrega un evento de clic al botón
+    btnAsistir1.addEventListener('click', function() {
+        // Redirige a la página 'registro.html'
+        window.location.href = 'registro.html';
+    });
+
+    // Obtén el botón por su ID
+    const btnAsistir2 = document.getElementById('btnAsistir2');
+
+    // Agrega un evento de clic al botón
+    btnAsistir2.addEventListener('click', function() {
+        // Redirige a la página 'registro.html'
+        window.location.href = 'registro.html';
+    });
+
+    // Obtén el botón por su ID
+    const btnAsistir3 = document.getElementById('btnAsistir3');
+
+    // Agrega un evento de clic al botón
+    btnAsistir3.addEventListener('click', function() {
+        // Redirige a la página 'registro.html'
+        window.location.href = 'registro.html';
+    });
+ //fin........................................................
+
